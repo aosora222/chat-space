@@ -1,6 +1,5 @@
 # README
 
-* Ruby version
 This README would normally document whatever steps are necessary to get ## ChatSpace DB設計
 ## usersテーブル
 |Column|Type|Options|
