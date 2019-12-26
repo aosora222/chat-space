@@ -8,16 +8,16 @@ This README would normally document whatever steps are necessary to get ## ChatS
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :user_groups
+- has_many :users_groups
 - has_many :comments
-- has_many :groups, through: :user_group
+- has_many :groups, through: :users_groups
 
 
-## user_groupテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -28,9 +28,9 @@ This README would normally document whatever steps are necessary to get ## ChatS
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :user_groups
+- has_many :users_groups
 - has_many :comments
-- has_many :users, through: :user_group
+- has_many :users, through: :users_groups
 
 
 ## commentsテーブル
@@ -38,8 +38,8 @@ This README would normally document whatever steps are necessary to get ## ChatS
 |------|----|-------|
 |text|text||
 |img|string||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
