@@ -10,6 +10,7 @@ This README would normally document whatever steps are necessary to get ## ChatS
 ### Association
 - has_many :user_groups
 - has_many :comments
+- has_many :groups, through: :user_group
 
 
 ## user_groupテーブル
@@ -25,16 +26,18 @@ This README would normally document whatever steps are necessary to get ## ChatS
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|null: false|
+|name|string|null: false|
 ### Association
-- has_many :user_group
+- has_many :user_groups
 - has_many :comments
+- has_many :users, through: :user_group
 
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
+|img|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
