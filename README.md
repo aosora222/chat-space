@@ -8,7 +8,7 @@ This README would normally document whatever steps are necessary to get ## ChatS
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :user_group
+- has_many :user_groups
 - has_many :comments
 
 
