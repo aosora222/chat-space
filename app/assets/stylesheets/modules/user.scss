@@ -12,6 +12,7 @@
       width: 50%;
     }
     &:after {
+      clear: both;
       content: "";
       display: block;
     }
