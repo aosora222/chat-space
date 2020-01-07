@@ -127,17 +127,23 @@
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+    .new_message{
+      height: 90px;
+      width: 100vw;
+      align-items: center;
+    }
 
     &__comment{
-      height: 50px;
+      height: 90px;
       width: calc(100% - 100px);
       padding-left: 40px;
       position: relative;
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       &__text{
-        width: 100%;
+        width: 62vw;
         .size{
           height: 50px;
           width: 100%;
@@ -147,25 +153,22 @@
       }
       &__img{
 
-        position: absolute;top:14px; right:10px;
+        position: absolute;right:153px;
           .image__del{
           display: none;
         }
 
       }
     }
-    &__send{
+    .form__submit{
       background-color: #38aef0;
       height: 50px;
       width: 100px;
       margin: 20px 40px 20px 15px;
       text-align: center;
-      padding-top: 14px;
-      a{
-        color: #ffffff;
-        font-size: 16px;
-        text-decoration: none;
-      }
+      color: #ffffff;
+      font-size: 16px;
+      text-decoration: none;
     }
   }
 }
