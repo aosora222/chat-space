@@ -18,7 +18,7 @@ $(function(){
           <img class="lower-message__image" src="${message.image}">
       </div>
     </div>`
-    return html
+    return html;
   } else if (message.content) {
     var html =
     `<div class="chat-main__message__list" data-message-id=${message.id}>
