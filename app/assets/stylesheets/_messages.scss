@@ -65,28 +65,34 @@
     height: 100px;
     display: flex;
     justify-content: space-between;
+    border-bottom: solid 1px #eee;
+    overflow: scroll;
+    padding: 0 40px;
 
     &__left{
 
       &__name{
         color: #333333;
         font-size: 20px;
-        padding: 20px 0 15px 40px;
+        padding: 20px 0 15px 0;
       }
       &__member{
         color: #999999;
         font-size: 12px;
-        padding-left: 40px;
+
       }
     }
     &__right{
       width: 72px;
-      padding: 28px 20px 0;
+      padding-top: 28px;
 
       a{
         color: #38aef0;
         font-size: 16px;
         text-decoration: none;
+        line-height: 40px;
+        border: solid 1px #38aef0;
+        padding: 8px 16px;
       }
     }
   }
@@ -130,13 +136,13 @@
     justify-content: space-between;
     .new_message{
       height: 90px;
-      width: 100vw;
+      width: 100%;
       align-items: center;
     }
 
     &__comment{
       height: 90px;
-      width: calc(100% - 100px);
+      // width: calc(100% - 100px);
       padding-left: 40px;
       position: relative;
       display: flex;
@@ -154,7 +160,8 @@
       }
       &__img{
 
-        position: absolute;right:153px;
+        position: absolute;
+        right:153px;
           .image__del{
           display: none;
         }
